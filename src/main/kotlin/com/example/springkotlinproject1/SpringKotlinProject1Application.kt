@@ -8,13 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @SpringBootApplication
 @RestController
-class SpringKotlinProject1Application {
-
-	@GetMapping
-	fun hi(): Person {
-		return Person(lastName = "The Monster", name = "Frankenstein")
-	}
-}
+class SpringKotlinProject1Application
 
 fun main(args: Array<String>) {
 	runApplication<SpringKotlinProject1Application>(*args)

@@ -22,6 +22,7 @@ class PersonManagementServiceImpl(private val personDao: PersonDao, private val 
 
     override fun update(updatePersonRequest: UpdatePersonRequest): PersonResponse {
         val person = this.findPersonById(updatePersonRequest.id) ?: throw IllegalStateException("${updatePersonRequest.id} not found")
+
         return this.saveOrUpdate(person.apply {
             this.name = updatePersonRequest.name
             this.lastName = updatePersonRequest.lastName
